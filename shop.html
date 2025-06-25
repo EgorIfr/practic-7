@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Магазин | КИНО</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">
+            <img src="images/Kino_band_logo.svg" alt="Кино" class="logo-img" />
+          </a>
+          <button class="burger-menu" aria-label="Меню">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="main-nav hidden">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="index.html#history">История</a></li>
+        <li><a href="index.html#albums">Альбомы</a></li>
+        <li><a href="index.html#gallery">Галерея</a></li>
+        <li><a href="shop.html">Магазин</a></li>
+        <li><a href="index.html#contacts">Контакты</a></li>
+        <hr />
+        <li><a href="index.html">Главная</a></li>
+      </ul>
+    </nav>
+
+    <main class="shop-page">
+      <section class="section">
+        <div class="container">
+          <h1 style="text-shadow: #fc0 1px 0 10px">МАГАЗИН</h1>
+
+          <div class="shop-container">
+            <!-- Фильтры -->
+            <aside class="shop-filters">
+              <h2>Фильтры</h2>
+
+              <div class="filter-group">
+                <h3>Категории</h3>
+                <ul class="filter-list">
+                  <li>
+                    <label class="filter-label">
+                      <input
+                        type="checkbox"
+                        class="category-filter"
+                        value="all"
+                        checked
+                      />
+                      Все товары
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filter-label">
+                      <input
+                        type="checkbox"
+                        class="category-filter"
+                        value="clothing"
+                      />
+                      Одежда
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filter-label">
+                      <input
+                        type="checkbox"
+                        class="category-filter"
+                        value="vinyl"
+                      />
+                      Пластинки
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filter-label">
+                      <input
+                        type="checkbox"
+                        class="category-filter"
+                        value="accessories"
+                      />
+                      Аксессуары
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="filter-group">
+                <h3>Цена</h3>
+                <div class="price-range">
+                  <input
+                    type="range"
+                    id="price-slider"
+                    min="0"
+                    max="10000"
+                    value="10000"
+                    class="price-slider"
+                  />
+                  <div class="price-values">
+                    <span id="min-price">0 ₽</span>
+                    <span id="max-price">10000 ₽</span>
+                  </div>
+                </div>
+              </div>
+
+              <button class="filter-button" id="apply-filters">
+                Применить
+              </button>
+              <button class="filter-button reset" id="reset-filters">
+                Сбросить
+              </button>
+            </aside>
+
+            <!-- Товары -->
+            <div class="shop-products">
+              <div class="product-grid" id="product-grid">
+                <!-- Карточка товара 1 -->
+                <div
+                  class="product-card"
+                  data-category="clothing"
+                  data-price="2990"
+                >
+                  <div class="product-badge">Хит</div>
+                  <img
+                    src="images/product1.jpg"
+                    alt="Футболка Группа крови"
+                    class="product-image"
+                  />
+                  <div class="product-info">
+                    <h3 class="product-title">Футболка "Группа крови"</h3>
+                    <div class="product-category">Одежда</div>
+                    <div class="product-price">2 990 ₽</div>
+                    <button class="product-button">В корзину</button>
+                  </div>
+                </div>
+
+                <!-- Карточка товара 2 -->
+                <div
+                  class="product-card"
+                  data-category="vinyl"
+                  data-price="3490"
+                >
+                  <img
+                    src="images/product2.jpg"
+                    alt="Виниловая пластинка Звезда по имени Солнце"
+                    class="product-image"
+                  />
+                  <div class="product-info">
+                    <h3 class="product-title">
+                      Винил "Звезда по имени Солнце"
+                    </h3>
+                    <div class="product-category">Пластинки</div>
+                    <div class="product-price">3 490 ₽</div>
+                    <button class="product-button">В корзину</button>
+                  </div>
+                </div>
+
+                <!-- Карточка товара 3 -->
+                <div
+                  class="product-card"
+                  data-category="clothing"
+                  data-price="4990"
+                >
+                  <div class="product-badge">Новинка</div>
+                  <img
+                    src="images/product3.jpg"
+                    alt="Свитшот Кино"
+                    class="product-image"
+                  />
+                  <div class="product-info">
+                    <h3 class="product-title">Свитшот "Кино"</h3>
+                    <div class="product-category">Одежда</div>
+                    <div class="product-price">4 990 ₽</div>
+                    <button class="product-button">В корзину</button>
+                  </div>
+                </div>
+
+                <!-- Карточка товара 4 -->
+                <div
+                  class="product-card"
+                  data-category="vinyl"
+                  data-price="3290"
+                >
+                  <img
+                    src="images/product4.jpg"
+                    alt="Виниловая пластинка Группа крови"
+                    class="product-image"
+                  />
+                  <div class="product-info">
+                    <h3 class="product-title">Винил "Группа крови"</h3>
+                    <div class="product-category">Пластинки</div>
+                    <div class="product-price">3 290 ₽</div>
+                    <button class="product-button">В корзину</button>
+                  </div>
+                </div>
+
+                <!-- Карточка товара 5 -->
+                <div
+                  class="product-card"
+                  data-category="accessories"
+                  data-price="490"
+                >
+                  <img
+                    src="images/product5.jpg"
+                    alt="Значок Кино"
+                    class="product-image"
+                  />
+                  <div class="product-info">
+                    <h3 class="product-title">Значок "Кино"</h3>
+                    <div class="product-category">Аксессуары</div>
+                    <div class="product-price">490 ₽</div>
+                    <button class="product-button">В корзину</button>
+                  </div>
+                </div>
+
+                <!-- Карточка товара 6 -->
+                <div
+                  class="product-card"
+                  data-category="accessories"
+                  data-price="890"
+                >
+                  <div class="product-badge">Хит</div>
+                  <img
+                    src="images/product6.jpg"
+                    alt="Кружка Кино"
+                    class="product-image"
+                  />
+                  <div class="product-info">
+                    <h3 class="product-title">Кружка "Кино"</h3>
+                    <div class="product-category">Аксессуары</div>
+                    <div class="product-price">890 ₽</div>
+                    <button class="product-button">В корзину</button>
+                  </div>
+                </div>
+
+                <!-- Карточка товара 7 -->
+                <div
+                  class="product-card"
+                  data-category="vinyl"
+                  data-price="2990"
+                >
+                  <img
+                    src="images/product7.jpg"
+                    alt="Виниловая пластинка 45"
+                    class="product-image"
+                  />
+                  <div class="product-info">
+                    <h3 class="product-title">Винил "45"</h3>
+                    <div class="product-category">Пластинки</div>
+                    <div class="product-price">2 990 ₽</div>
+                    <button class="product-button">В корзину</button>
+                  </div>
+                </div>
+
+                <!-- Карточка товара 8 -->
+                <div
+                  class="product-card"
+                  data-category="clothing"
+                  data-price="3290"
+                >
+                  <img
+                    src="images/product8.jpg"
+                    alt="Футболка Виктор Цой"
+                    class="product-image"
+                  />
+                  <div class="product-info">
+                    <h3 class="product-title">Футболка "Виктор Цой"</h3>
+                    <div class="product-category">Одежда</div>
+                    <div class="product-price">3 290 ₽</div>
+                    <button class="product-button">В корзину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-bs" id="contacts">
+      <div class="row">
+        <div class="col-md-3 footer-brand">
+          <h2>Группа КИНО</h2>
+          <p>© 2014–2025 «g-kino.ru».</p>
+        </div>
+        <div class="col-md-4 footer-nav">
+          <ul>
+            <li>
+              <a href="tel:+79998887766">Связаться с нами: +7 999 888 77 66</a>
+            </li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Возврат</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Фильтрация товаров
+      document.addEventListener('DOMContentLoaded', function () {
+        const productGrid = document.getElementById('product-grid');
+        const products = Array.from(document.querySelectorAll('.product-card'));
+        const categoryFilters = document.querySelectorAll('.category-filter');
+        const priceSlider = document.getElementById('price-slider');
+        const maxPriceDisplay = document.getElementById('max-price');
+        const applyFiltersBtn = document.getElementById('apply-filters');
+        const resetFiltersBtn = document.getElementById('reset-filters');
+
+        // Обновление отображения цены
+        priceSlider.addEventListener('input', function () {
+          maxPriceDisplay.textContent = this.value + ' ₽';
+        });
+
+        // Применение фильтров
+        applyFiltersBtn.addEventListener('click', function () {
+          const maxPrice = parseInt(priceSlider.value);
+          const selectedCategories = Array.from(
+            document.querySelectorAll('.category-filter:checked')
+          ).map((el) => el.value);
+
+          // Проверяем, выбран ли "Все товары"
+          const allSelected = selectedCategories.includes('all');
+
+          products.forEach((product) => {
+            const productPrice = parseInt(product.dataset.price);
+            const productCategory = product.dataset.category;
+
+            // Проверка по цене и категории
+            const priceMatch = productPrice <= maxPrice;
+            const categoryMatch =
+              allSelected || selectedCategories.includes(productCategory);
+
+            if (priceMatch && categoryMatch) {
+              product.style.display = 'block';
+            } else {
+              product.style.display = 'none';
+            }
+          });
+        });
+
+        // Сброс фильтров
+        resetFiltersBtn.addEventListener('click', function () {
+          // Сброс чекбоксов
+          categoryFilters.forEach((filter) => {
+            filter.checked = filter.value === 'all';
+          });
+
+          // Сброс слайдера
+          priceSlider.value = 10000;
+          maxPriceDisplay.textContent = '10000 ₽';
+
+          // Показ всех товаров
+          products.forEach((product) => {
+            product.style.display = 'block';
+          });
+        });
+
+        // Обработка изменения "Все товары"
+        document
+          .querySelector('.category-filter[value="all"]')
+          .addEventListener('change', function () {
+            if (this.checked) {
+              categoryFilters.forEach((filter) => {
+                if (filter.value !== 'all') filter.checked = false;
+              });
+            }
+          });
+
+        // Обработка изменения других категорий
+        categoryFilters.forEach((filter) => {
+          if (filter.value !== 'all') {
+            filter.addEventListener('change', function () {
+              if (this.checked) {
+                document.querySelector(
+                  '.category-filter[value="all"]'
+                ).checked = false;
+              }
+            });
+          }
+        });
+      });
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
